@@ -14,29 +14,33 @@ def basicCalculations(): # First version of the calculator
     if operator == "plus" or operator == "1": # you could write the option ONLY basicCalculations(), it doesnt rly
         total = input1 + input2               # work on other functions
         print(f"{input1} + {input2}")
+        print(" ")
         print(f"Equals to: {total}")
         print(" ")
         askToRestart()
     elif operator == "minus" or operator == "2":
         total = input1 - input2
         print(f"{input1} - {input2}")
+        print(" ")
         print(f"Equals to: {total}")
         print(" ")
         askToRestart()
     elif operator == "times" or operator == "3":
         total = input1 * input2
         print(f"{input1} * {input2}")
+        print(" ")
         print(f"Equals to: {total}")
         print(" ")
         askToRestart()
     elif operator == "divide" or operator == "4":
         total = input1 / input2
         print(f"{input1} / {input2}")
+        print(" ")
         print(f"Equals to: {total}")
         print(" ")
         askToRestart()
     else:
-        print("Error with inputting operator, did you write the operator properly?")
+        print("Error with inputting operator, did you select the operator properly?")
         askToRestart()
     #end
 #end
