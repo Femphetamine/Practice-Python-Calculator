@@ -27,39 +27,53 @@ def basicCalculations(): # First version of the calculator
         print(f"Equals to: {total}")
     else:
         print("Error with inputting operator, did you write the operator properly?")
-# end
+    #end
+#end
 def fahrenheitToCelsius():
-    print("Converting fahrenheit to celsius")
-    input1 = float(input("Degrees (F) : "))
-    x = input1 - 32
-    y = 5 / 9
-    z = x * y
-    print(f"{input1} Degrees (F) is {z} Celsius")
-    if z < 0:
-        print(f"{z} Celsius = Freezing")
-    elif z < 10:
-        print(f"{z} Celsius = Cool")
-    elif z < 20:
-        print(f"{z} Celsius = Room temp")
-    elif z < 30:
-        print(f"{z} Celsius = Warm")
-    elif z < 37.8:
-        print(f"{z} Celsius = Hot")
-    elif z < 100:
-        print(f"{z} Celsius = Boiling")
-# end
+    print("1. Fahrenheit to Celsius")
+    print("2. Celsius to Fahrenheit")
+    selectConversion = str(input("Select : "))
+    conversionSelected = int(selectConversion)
+
+    if conversionSelected == 1:
+        print("Converting fahrenheit to celsius")
+        FtoC = float(input("Degrees (F) : "))
+        calculation = (FtoC - 32) * (5 / 9)
+        print(f"{FtoC} Degrees (F) is {calculation} Celsius")
+        if calculation < 0:
+            print(f"{calculation} Celsius = Freezing")
+        elif calculation < 10:
+            print(f"{calculation} Celsius = Cool")
+        elif calculation < 20:
+            print(f"{calculation} Celsius = Room temp")
+        elif calculation < 30:
+            print(f"{calculation} Celsius = Warm")
+        elif calculation < 37.8:
+            print(f"{calculation} Celsius = Hot")
+        elif calculation < 100:
+           print(f"{calculation} Celsius = Boiling")
+    elif conversionSelected == 2:
+        CtoF = float(input("Degrees (C) : "))
+        calculation = CtoF * (9 / 5) + 32
+        print(f"{CtoF} Degrees (C) is {calculation} Fahrenheit")
+    else:
+        print("Something went wrong, did you select using an integer?")
+    #end
+#end
 
 # <--           --          -->
 print("What do you want to calculate?")
 print("Input a number as your option")
 print("1. Basic calculation (2 Inputs max)") # extremely basic, revising soon
-print("2. Convert fahrenheit to celsius")
+print("2. Fahrenheit to celsius (and vice versa)")
 print("3. Percentages") # döh
-starterInput = str(input("Select : "))
+starterInput = str(input("Select : ")) # ig to make the else statement below work?
 selection = int(starterInput)
+
 if selection == 1:
     basicCalculations()
-if selection == 2:
+elif selection == 2:
     fahrenheitToCelsius()
 else:
     print("Something went wrong")
+#end
