@@ -11,7 +11,7 @@ def basicCalculations(): # First version of the calculator
     print(" ")
     operator = input("Selection : ")
     operator = operator.lower()
-    if operator == "plus" or operator == "1": # you could write the option in ONLY basicCalculations(), it doesnt rly
+    if operator == "plus" or operator == "1": # you could write the option ONLY basicCalculations(), it doesnt rly
         total = input1 + input2               # work on other functions
         print(f"{input1} + {input2}")
         print(f"Equals to: {total}")
