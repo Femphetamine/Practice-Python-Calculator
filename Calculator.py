@@ -28,4 +28,7 @@ def basicCalculations(): # First version of the calculator
 
 # <--           --          -->
 print("What do you want to calculate?")
-print("Input number as your option or write the selections names")
+print("Input a number as your option or write the options names")
+print("1. Basic calculation (2 Inputs max)") # extremely basic, revising soon
+print("2. Convert fahrenheit to celsius")
+print("3. Percentages") # döh
