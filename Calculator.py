@@ -85,12 +85,15 @@ def fahrenheitToCelsius():
     #end
 #end
 
+#end
+
 def startMenu():
     print("What do you want to calculate?")
     print("Input a number as your option")
     print("1. Basic calculation (2 Inputs max)") # extremely basic, revising soon
     print("2. Fahrenheit to celsius (and vice versa)")
-    # print("3. Percentages") # Not done made yet
+    # TODO: Percentages
+    # TODO: Circles?
     starterInput = str(input("Select : ")) # ig to make the else statement below work?
     selection = int(starterInput)
     if selection == 1:
