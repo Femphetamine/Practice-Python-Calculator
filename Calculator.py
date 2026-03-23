@@ -96,8 +96,6 @@ def askToRestart():
     askToRestartSelected = int(askToRestartSelection)
     if askToRestartSelected == 1:
         startMenu()
-        clear1()
-        clear2()
     elif askToRestartSelected == 2:
         print("Exiting!")
 
