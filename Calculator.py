@@ -13,22 +13,28 @@ def basicCalculations(): # First version of the calculator
         total = input1 + input2
         print(f"{input1} + {input2}")
         print(f"Equals to: {total}")
+        askToRestart()
     elif operator == "minus" or operator == "2":
         total = input1 - input2
         print(f"{input1} - {input2}")
         print(f"Equals to: {total}")
+        askToRestart()
     elif operator == "times" or operator == "3":
         total = input1 * input2
         print(f"{input1} * {input2}")
         print(f"Equals to: {total}")
+        askToRestart()
     elif operator == "divide" or operator == "4":
         total = input1 / input2
         print(f"{input1} / {input2}")
         print(f"Equals to: {total}")
+        askToRestart()
     else:
         print("Error with inputting operator, did you write the operator properly?")
+        askToRestart()
     #end
 #end
+
 def fahrenheitToCelsius():
     print("1. Fahrenheit to Celsius")
     print("2. Celsius to Fahrenheit")
@@ -52,28 +58,47 @@ def fahrenheitToCelsius():
             print(f"{calculation} Celsius = Hot")
         elif calculation < 100:
            print(f"{calculation} Celsius = Boiling")
+        askToRestart()
     elif conversionSelected == 2:
         CtoF = float(input("Degrees (C) : "))
         calculation = CtoF * (9 / 5) + 32
         print(f"{CtoF} Degrees (C) is {calculation} Fahrenheit")
+        askToRestart()
     else:
         print("Something went wrong, did you select using an integer?")
+        askToRestart()
     #end
 #end
 
-# <--           --          -->
-print("What do you want to calculate?")
-print("Input a number as your option")
-print("1. Basic calculation (2 Inputs max)") # extremely basic, revising soon
-print("2. Fahrenheit to celsius (and vice versa)")
-print("3. Percentages") # döh
-starterInput = str(input("Select : ")) # ig to make the else statement below work?
-selection = int(starterInput)
-
-if selection == 1:
-    basicCalculations()
-elif selection == 2:
-    fahrenheitToCelsius()
-else:
-    print("Something went wrong")
+def startMenu():
+    print("What do you want to calculate?")
+    print("Input a number as your option")
+    print("1. Basic calculation (2 Inputs max)") # extremely basic, revising soon
+    print("2. Fahrenheit to celsius (and vice versa)")
+    print("3. Percentages") # döh
+    starterInput = str(input("Select : ")) # ig to make the else statement below work?
+    selection = int(starterInput)
+    if selection == 1:
+        basicCalculations()
+    elif selection == 2:
+        fahrenheitToCelsius()
+    else:
+        print("Something went wrong")
+        askToRestart()
+    #end
 #end
+
+def askToRestart():
+    print("Would you like to calculate more or exit?")
+    print("1. Go back to the start menu")
+    print("2. Exit")
+    askToRestartSelection = str(input("Select : "))
+    askToRestartSelected = int(askToRestartSelection)
+    if askToRestartSelected == 1:
+        startMenu()
+        clear1()
+        clear2()
+    elif askToRestartSelected == 2:
+        print("Exiting!")
+
+startMenu()
