@@ -1,1 +1,1 @@
-Suuuuper basic calculator, made for practice :)
+Suuuuper basic calculator, made to practice :)
