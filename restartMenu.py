@@ -1,4 +1,4 @@
-from program import startMenu
+from main import startMenu
 
 def askToRestart():
     print("Program complete.")

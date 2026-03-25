@@ -1,4 +1,5 @@
 from restartMenu import askToRestart
+
 def startMenu():
     print("1. Debug")
     selection = int(input("Select : "))
@@ -6,5 +7,5 @@ def startMenu():
         askToRestart()
     else:
         print("Error!")
-        askToRestart
+        askToRestart()
 #end
