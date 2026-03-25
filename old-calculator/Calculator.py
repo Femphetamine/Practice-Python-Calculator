@@ -85,13 +85,28 @@ def fahrenheitToCelsius():
     #end
 #end
 
-#end
+def metricConversionMenu():
+    #TODO: meter to imperial
+    #      km to miles
+    #      meters to inches
+    print("1. Kilometers to miles")
 
+    print(" ")
+    metricSelector = str(input("Select : "))
+    metricSelection = int(metricSelector)
+    if metricSelection == 1:
+        kmtomile()
+    else:
+        print("Error in selection, did you use a number to select an option?")
+
+    askToRestart()
+#end
 def startMenu():
     print("What do you want to calculate?")
     print("Input a number as your option")
     print("1. Basic calculation (2 Inputs max)") # extremely basic, revising soon
     print("2. Fahrenheit to celsius (and vice versa)")
+    print("3. Metrics to imperial(US) (and vice versa)")
     # TODO: Percentages
     # TODO: Circles?
     starterInput = str(input("Select : ")) # ig to make the else statement below work?
@@ -102,6 +117,9 @@ def startMenu():
     elif selection == 2:
         print(" ")
         fahrenheitToCelsius()
+    elif selection == 3:
+       print(" ")
+       metricConversion() 
     else:
         print("Something went wrong")
         askToRestart()
