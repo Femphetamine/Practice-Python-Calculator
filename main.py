@@ -1,24 +1,45 @@
-from restartMenu import askToRestart
+# Run this program to run the calculator!!!
 
+
+
+from modules.simple import basicCalculating
+import os
+
+
+# < --- Main menu --- >
 def startMenu():
-    print("1. Debug")
-    selection = int(input("Select : "))
-    if selection == 1:
-        askToRestart()
+    print("-- Main menu --")
+    print("Select an option by entering a number!")
+    print("1. Basic calculating")
+    select = int(input("Select : "))
+    if select == 1:
+        basicCalculating()
+    elif select == 2:
+        None #temperatureConverting
     else:
-        print("Error!")
-        askToRestart()
+        print("Err")
     #end
 #end
 
-def askToRestart():
-    print("Program complete.")
-    print("1. Restart program")
-    print("2. Exit program")
-    selection = int(input("Select : "))
-    if selection == 1:
+startMenu()
+
+# < --- Restart menu --- >
+# <summary>
+# function is called when another function ends
+# </summary>
+def restartMenu():
+    print(" ")
+    print("Program finished")
+    print("1. Back to the main menu (Continue using)")
+    print("2. Exit")
+    select = int(input("Select : "))
+    if select == 1:
+        print(" ")
+        os.system('cls' if os.name == 'nt' else 'clear')
         startMenu()
-    elif selection == 2:
+    elif select == 2:
         print("Bye bye!")
     #end
 #end
+
+restartMenu()
