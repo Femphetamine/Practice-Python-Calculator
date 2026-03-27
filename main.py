@@ -1,28 +1,9 @@
-# Run this program to run the calculator!!!
+# Run this program to run the calculator!
 
 
-
+from modules.temp import tempCalc
 from modules.simple import basicCalculating
 import os
-
-
-# < --- Main menu --- >
-def startMenu():
-    print("-- Main menu --")
-    print("Select an option by entering a number!")
-    print("1. Basic calculating")
-    select = int(input("Select : "))
-    if select == 1:
-        basicCalculating()
-    elif select == 2:
-        None #temperatureConverting
-    else:
-        print("Err")
-    #end
-#end
-
-startMenu()
-
 # < --- Restart menu --- >
 # <summary>
 # function is called when another function ends
@@ -42,4 +23,21 @@ def restartMenu():
     #end
 #end
 
-restartMenu()
+# < --- Main menu --- >
+def startMenu():
+    print("-- Main menu --")
+    print("Select an option by entering a number!")
+    print("1. Basic calculating")
+    print("2. Temperature conversion")
+    select = int(input("Select : "))
+    if select == 1:
+        basicCalculating()
+    elif select == 2:
+        tempCalc()
+    else:
+        print("Err")
+    #end
+    restartMenu()
+#end
+
+startMenu()

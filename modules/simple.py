@@ -1,6 +1,8 @@
+import os
+
 def basicCalculating():
-    print("Success!")
     # i have to learn dynamic variables at some point
+    os.system('cls' if os.name == 'nt' else 'clear')
     n1 = float(input("First digit(s) : "))
     print(" ")
     print("1. Addition")
@@ -19,8 +21,8 @@ def basicCalculating():
         print(f"{n1} - {n2} = {t}")
         print(f"= {t}")
     elif op == 3:
-        print(f"{n1} * {n2} = {t}")
         t = n1 * n2
+        print(f"{n1} * {n2} = {t}")
         print(f"= {t}")
     elif op == 4:
         t = n1 / n2
